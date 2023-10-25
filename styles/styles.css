@@ -1,0 +1,100 @@
+body {
+  background: radial-gradient(circle at center, #0000FF, #000000);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  /* Fondo completamente transparente  */
+  background-color: rgba(255, 255, 255, 0);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  para que se vea el contorno de la tarjeta  */
+  max-width: 300px;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding: 80px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card button {
+  margin: 0 auto;
+}
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0px 20px;
+  border: yellow solid 0.15em;
+  border-radius: 30%;
+  color: yellow;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: yellow;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: yellow;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+@media (max-width: 768px) {
+  .card {
+      max-width: 90%;
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "short_name": "Los Simpson", 
+    "name":"Los Simpson", 
+    "description": "Aplicación que muestra informaciónde los Simpson",
+    "start_url": "index.html",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "display": "standalone",
+    "orientation":"portrait",
+    "icons":[
+        {
+            "src":"assets/transformacion/256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+
+        {
+            "src":"assets/transformacion/128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+
+        {
+            "src":"assets/transformacion/96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        }
+    ]
+}
